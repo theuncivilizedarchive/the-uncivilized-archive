@@ -16,7 +16,7 @@ from telegram import Bot
 # CONFIGURATION
 # ======================
 BOT_TOKEN = os.getenv("BOT_TOKEN")
-CHANNEL = "@tuo_canale" # Cambia con il tuo username
+CHANNEL = "@theuncivilizedarchive" 
 
 MAX_POSTS_PER_RUN = 5
 SLEEP_BETWEEN_POSTS_SEC = 2
