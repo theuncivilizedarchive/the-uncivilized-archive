@@ -61,6 +61,11 @@ FEEDS = [
     "https://backyardforager.com/feed/",
     "https://Wildfoodism.com/feed/",
     "https://solar.lowtechmagazine.com/posts.xml"
+    "https://www.geocaching.com/blog/feed/",            # Il blog ufficiale (storie e novità mondiali)
+    "https://geocaching247.com/feed/",                 # News e recensioni attrezzatura
+    "https://cache-advance.com/rss.asp?type=home",     # Tutorial tecnici e gadget
+    "https://podcacher.com/feed/",                     # Storie di esplorazione e community
+]
 ]
 
 # 2) Fonti SCRAPING (Archivi e siti senza RSS)
@@ -90,7 +95,11 @@ SCRAPE_SOURCES = [
     {"name": "Root Simple", "url": "https://www.rootsimple.com/blog/", "container": "h2.entry-title", "filter": ""},
     {"name": "Survival Tech Shop", "url": "https://survivaltechshop.com/blog/", "container": "h2.entry-title", "filter": ""},
     {"name": "The Prepper Journal", "url": "https://theprepperjournal.com/", "container": "h2.entry-title", "filter": ""},
-    {"name": "Abandoned Berlin", "url": "http://www.abandonedberlin.com/", "container": "h2.entry-title", "filter": ""}
+    {"name": "Abandoned Berlin", "url": "http://www.abandonedberlin.com/", "container": "h2.entry-title", "filter": ""},
+    {"name": "Geocaching 101", "url": "https://www.geocaching.com/blog/category/geocaching-101/", "container": "h2.entry-title", "filter": ""},
+    {"name": "GPS Central Blog", "url": "https://www.gpscentral.ca/blog/", "container": "h2.post-title", "filter": ""},
+    {"name": "Navicache News", "url": "https://www.navicache.com/", "container": "td.news", "filter": ""},
+    {"name": "Cache Advance", "url": "https://cache-advance.com/blog.asp", "container": "h2", "filter": ""}
 ]
 UA_HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
