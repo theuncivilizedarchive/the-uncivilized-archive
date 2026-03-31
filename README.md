@@ -4,7 +4,7 @@ An automated bot that collects resoruces for all the anprims that are interested
 It collects:
 📖 Theory: Anprim, Deep Ecology, Rewilding.
 🛠️ Practice: Survival, Bushcraft, Off-grid living.
-🏚️ Exploration: Urbex and industrial decay, Geocaching.
+🌲 Exploration: Forest scouting, tracking, and wilderness immersion.
 
 👉 **Telegram Channel:** https://t.me/theuncivilizedarchive
 ---
