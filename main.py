@@ -46,25 +46,18 @@ FEEDS = [
     "https://dark-mountain.net/feed/",
     "https://thesurvivalmom.com/feed/",
     "https://earthfirstjournal.news/feed/",
-    "https://www.primitiveways.com/index.html", # Scansione manuale necessaria dopo, qui come placeholder
     "https://survivalpunk.com/feed/",
     "https://www.survivalistboards.com/index.rss",
     "https://www.theorganicprepper.com/feed/",
-    "https://urbexcentral.com/feed/",
-    "https://www.abandonedspaces.com/feed",
     "https://rewild.com/feed/",
     "https://unsettlingamerica.wordpress.com/feed/",
     "https://anarchistnews.org/rss.xml",
     "https://theprepared.com/feed/",
     "https://www.outdoorlife.com/category/survival/feed/",
-    "https://www.motherearthnews.com/feed/",
     "https://backyardforager.com/feed/",
     "https://Wildfoodism.com/feed/",
-    "https://solar.lowtechmagazine.com/posts.xml"
-    "https://www.geocaching.com/blog/feed/",            # Il blog ufficiale (storie e novità mondiali)
-    "https://geocaching247.com/feed/",                 # News e recensioni attrezzatura
-    "https://cache-advance.com/rss.asp?type=home",     # Tutorial tecnici e gadget
-    "https://podcacher.com/feed/",                     # Storie di esplorazione e community
+    "https://solar.lowtechmagazine.com/posts.xml",
+    "https://wild-fed.com/blog?format=rss"
 ]
 
 # 2) Fonti SCRAPING (Archivi e siti senza RSS)
@@ -74,41 +67,37 @@ SCRAPE_SOURCES = [
     {"name": "Primitivism Writings", "url": "http://www.primitivism.com/writings.htm", "container": "p", "filter": ""},
     {"name": "Machorka Books", "url": "https://machorka.espivblogs.net/category/books-pamphlets/", "container": "article h2", "filter": ""},
     {"name": "The Anarchist Library - Anti-Civ", "url": "https://theanarchistlibrary.org/category/topic/anti-civilization", "container": ".archive-item", "filter": ""},
-    {"name": "Urbex Hub - Guides", "url": "https://urbexhub.com/category/guides/", "container": "h2.entry-title", "filter": ""},
     {"name": "Prepper PDF Manuals", "url": "https://www.prepperwebsite.com/free-survival-pdf-manuals/", "container": "li", "filter": ".pdf"},
-    {"name": "SHTF Plan", "url": "https://www.shtfplan.com/", "container": "h2.entry-title", "filter": ""},
     {"name": "Primitive Skills", "url": "https://primitiveskills.net/", "container": "h2.post-title", "filter": ""},
     {"name": "Wildwood Survival", "url": "http://wildwoodsurvival.com/", "container": "li", "filter": ".html"},
-    {"name": "The Urban Explorer", "url": "https://www.theurbanexplorer.co.uk/locations/", "container": "article h3", "filter": ""},
     {"name": "Ancient Origins", "url": "https://www.ancient-origins.net/ancient-places", "container": "h3", "filter": ""},
-    {"name": "Prepping PDF Library", "url": "https://www.survivalistboards.com/resources/", "container": "h3.resource-title", "filter": ""},
     {"name": "Notes from the wild", "url": "https://www.notesfromthewild.com/blog/", "container": "h2.entry-title", "filter": ""},
-    {"name": "Survival Manuals PDF", "url": "https://www.survivalsullivan.com/survival-pdf-files/", "container": "li a", "filter": ".pdf"},
-    {"name": "Forgotten Urbex", "url": "https://www.forgottenurbex.com/blog", "container": "h2.post-title", "filter": ""},
     {"name": "The New York Radical Archive", "url": "https://radicalarchives.org/category/ecology/", "container": "h2.entry-title", "filter": ""},
-    {"name": "Project Gutenberg - Survival Tags", "url": "https://www.gutenberg.org/ebooks/search/?query=survival", "container": "li.booklink", "filter": ""},
-    {"name": "Libcom - Ecology/Anarchism", "url": "https://libcom.org/tags/ecology", "container": "h2.title", "filter": ""},
+    {"name": "Project Gutenberg - Survival", "url": "https://www.gutenberg.org/ebooks/search/?query=survival", "container": "li.booklink", "filter": ""},
+    {"name": "Libcom - Ecology", "url": "https://libcom.org/tags/ecology", "container": "h2.title", "filter": ""},
     {"name": "Practical Primitivism", "url": "https://practicalprimitivism.com/blog/", "container": "h2.entry-title", "filter": ""},
     {"name": "Rewilding Earth", "url": "https://rewilding.org/category/blog/", "container": "h2.entry-title", "filter": ""},
     {"name": "Bushcraft Days", "url": "http://bushcraftdays.com/", "container": "h2.entry-title", "filter": ""},
-    {"name": "Root Simple", "url": "https://www.rootsimple.com/blog/", "container": "h2.entry-title", "filter": ""},
-    {"name": "Survival Tech Shop", "url": "https://survivaltechshop.com/blog/", "container": "h2.entry-title", "filter": ""},
-    {"name": "The Prepper Journal", "url": "https://theprepperjournal.com/", "container": "h2.entry-title", "filter": ""},
-    {"name": "Abandoned Berlin", "url": "http://www.abandonedberlin.com/", "container": "h2.entry-title", "filter": ""},
-    {"name": "Geocaching 101", "url": "https://www.geocaching.com/blog/category/geocaching-101/", "container": "h2.entry-title", "filter": ""},
-    {"name": "GPS Central Blog", "url": "https://www.gpscentral.ca/blog/", "container": "h2.post-title", "filter": ""},
-    {"name": "Navicache News", "url": "https://www.navicache.com/", "container": "td.news", "filter": ""},
-    {"name": "Cache Advance", "url": "https://cache-advance.com/blog.asp", "container": "h2", "filter": ""}
+    {"name": "Small Farmers Journal", "url": "https://smallfarmersjournal.com/", "container": "h2.entry-title", "filter": ""},
+    {"name": "Traditional Skills", "url": "https://traditionalskills.com/blog/", "container": "h2", "filter": ""},
+    # --- Esplorazione Foreste & Tracking ---
+    {"name": "Nature Tracking", "url": "https://www.naturetracking.com/", "container": "h2", "filter": ""},
+    {"name": "Wilderness Awareness", "url": "https://wildernessawareness.org/blog/", "container": "h2.entry-title", "filter": ""},
+    {"name": "Tracker School Blog", "url": "https://tracker-school.com/blog/", "container": "h2", "filter": ""},
+    {"name": "Rewild University", "url": "https://rewildu.com/blog/", "container": "h2", "filter": ""},
+    {"name": "Woodland Trust", "url": "https://www.woodlandtrust.org.uk/blog/", "container": "h2", "filter": ""},
+    {"name": "American Forests", "url": "https://www.americanforests.org/blog/", "container": "h2", "filter": ""},
+    {"name": "Forestry Scotland", "url": "https://forestryandland.gov.scot/blog", "container": "h3", "filter": ""}
 ]
 UA_HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 }
 
 TOPIC_KEYWORDS = {
-    "anprim": ["anprim", "anti-civ", "primitivism", "rewilding", "wildness", "hunter-gatherer", "nature"],
-    "survival": ["survival", "prepping", "off-grid", "bushcraft", "foraging", "emergency", "wilderness", "guide", "manual"],
-    "urbex": ["urbex", "urban exploration", "abandoned", "infiltrating", "ruins", "decay", "underground"],
-    "resources": ["pdf", "ebook", "manual", "book", "archive", "pamphlet", "download"]
+    "anprim": ["anprim", "anti-civ", "primitivism", "rewilding", "wildness", "hunter-gatherer", "nature", "deep ecology", "zerzan", "kaczynski"],
+    "survival": ["survival", "prepping", "off-grid", "bushcraft", "foraging", "emergency", "wilderness", "guide", "manual", "primitive skills", "shelter"],
+    "exploration": ["forest", "tracking", "scouting", "landscape reading", "navigation", "wild", "woodland", "mountains", "trails", "flora", "fauna"],
+    "resources": ["pdf", "ebook", "manual", "book", "archive", "pamphlet", "download", "library", "manuscript"]
 }
 
 # ======================
