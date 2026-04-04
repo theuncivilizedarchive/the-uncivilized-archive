@@ -2,8 +2,8 @@ name: The Uncivilized Archive Bot
 
 on:
   schedule:
-    # Gira ogni 2 ore (frequenza sicura per traduzioni e spam)
-    - cron:  "*/5 * * * *"
+    # Gira una volta all'ora (al minuto 0)
+    - cron: "0 * * * *"
   workflow_dispatch: 
 
 permissions:
@@ -34,7 +34,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # Salviamo archive.db per non ripetere i post al prossimo giro
+          # Salviamo archive.db per mantenere lo stato ed evitare duplicati
           git add archive.db
           git commit -m "Update archive database [skip ci]" || echo "No changes to commit"
           git push
