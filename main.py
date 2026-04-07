@@ -18,7 +18,7 @@ from telegram import Bot
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 CHANNEL = "@theuncivilizedarchive"
 
-MAX_POSTS_PER_RUN = 5
+MAX_POSTS_PER_RUN = 1
 SLEEP_BETWEEN_POSTS_SEC = 30
 
 # ======================
